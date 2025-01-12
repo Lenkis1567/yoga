@@ -6,15 +6,18 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url('../../images/ellipse-shape.png'), url('../../images/shape-bottom.png');  
+    background-image: url('../../images/ellipse-shape.png'), 
+    url('../../images/ellipse-yellow.png'), 
+    url('../../images/shape-bottom.png'),  
+    url('../../images/shape-bottom.png');  
     background-color: transparent;  
-    background-position: calc(100% + 200px) top, left bottom; 
-    background-repeat: no-repeat, no-repeat; 
+    background-position: 100% top, 100% top, left bottom, left 1000px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; 
 }
 
 @font-face {
     font-family: 'Raleway';
-    src: url('../../fonts/Raleway-Regular.ttf');
+    src: url('../../fonts/raleway-regular.ttf');
 }
 
 @font-face {
@@ -111,6 +114,7 @@ body {
                             font-family: 'RalewayLight', sans-serif;
                             font-size: 18px;
                             padding-bottom: 3px;
+                            transition: border-bottom 0.3s ease; 
                             &:hover {
                                 border-bottom: 2px solid @text-color;
                             }
@@ -149,7 +153,8 @@ body {
                 color: @text-color;
                 line-height: 30px;
                 max-width: 390px;
-                margin-bottom: 77px;
+                margin-bottom: 72px;
+                padding: 0 240px 0 0;
             }
             .main__buttons-container { 
                 display:flex;
@@ -178,7 +183,7 @@ body {
         .main__image {
             position: absolute;
             top: 5px;
-            right: 165px;
+            right: 375px;
             z-index: -1;
             img {
                 max-width: 100%;
@@ -214,11 +219,11 @@ body {
                 width: 765px; 
                 height: 376px;
                 border: 7px solid #f4deff;
-                border-radius: 10px;
+                border-radius: 24px;
                 iframe {
                     position: absolute;
                     top: 0;
-                    border-radius: 8px;
+                    border-radius: 18px;
                     left: 0;
                     width: 765px; /* Full width of the container */
                     height: 376px; /* Full height of the container */
@@ -230,7 +235,7 @@ body {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-top:60px;
+            margin-top: 40px;
             padding: 0 82px;
             .advantages__item {
                 text-align: center;
@@ -272,7 +277,7 @@ body {
    
 
 .teachers {
-    background-color: @main-color;
+    background-color: transparent;
     .teachers__container {
         padding: 100px 10px;
         text-align: center;
@@ -339,7 +344,7 @@ body {
 
 
 .service {
-    background-color: white;
+    background-color: transparent;
     .service__container {
         padding-bottom: 50px;
         .service__title {
@@ -399,7 +404,7 @@ body {
             justify-content: space-between;
             margin-bottom:167px;
             .class__text{
-                max-width: 475px;
+                max-width: 485px;
                 text-align: center;
                 .class__text-title{
                     margin-top: 14px;
@@ -422,7 +427,8 @@ body {
         .pluses{
             display:flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
+            padding: 0 30px;
             .plus{
                 max-width: 235px;
                 text-align: center;
@@ -467,6 +473,9 @@ body {
                         background-color: @button-color;
                         color: @text-color;
                         width: 347px;
+                    }
+                    .error-border {
+                        border: 1px solid red;
                     }
                     input{
                         border: 3px solid @button-color;
@@ -543,7 +552,8 @@ body {
                                 padding: 0 4px;
                                 &:hover {
                                     img {
-                                        opacity:10%
+                                        opacity:70%;
+                                        transition: opacity 0.3s ease; 
                                     }
                                 }
                             }

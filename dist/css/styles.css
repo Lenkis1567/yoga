@@ -5,14 +5,14 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url('../../images/ellipse-shape.png'), url('../../images/shape-bottom.png');
+  background-image: url('../../images/ellipse-shape.png'), url('../../images/ellipse-yellow.png'), url('../../images/shape-bottom.png'), url('../../images/shape-bottom.png');
   background-color: transparent;
-  background-position: calc(100% + 200px) top, left bottom;
-  background-repeat: no-repeat, no-repeat;
+  background-position: 100% top, 100% top, left bottom, left 1000px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
 @font-face {
   font-family: 'Raleway';
-  src: url('../../fonts/Raleway-Regular.ttf');
+  src: url('../../fonts/raleway-regular.ttf');
 }
 @font-face {
   font-family: 'RalewayBold';
@@ -92,9 +92,10 @@ body {
 .header .header__container .menu .menu__list .menu__list-items a {
   color: #3f3e3e;
   text-decoration: none;
-  font-family: 'ralewaylight', sans-serif;
+  font-family: 'RalewayLight', sans-serif;
   font-size: 18px;
   padding-bottom: 3px;
+  transition: border-bottom 0.3s ease;
 }
 .header .header__container .menu .menu__list .menu__list-items a:hover {
   border-bottom: 2px solid #3f3e3e;
@@ -129,7 +130,8 @@ body {
   color: #3f3e3e;
   line-height: 30px;
   max-width: 390px;
-  margin-bottom: 77px;
+  margin-bottom: 72px;
+  padding: 0 240px 0 0;
 }
 .main .main__container .main__info .main__buttons-container {
   display: flex;
@@ -171,7 +173,7 @@ body {
 .main .main__container .main__image {
   position: absolute;
   top: 5px;
-  right: 165px;
+  right: 375px;
   z-index: -1;
 }
 .main .main__container .main__image img {
@@ -202,12 +204,12 @@ body {
   width: 765px;
   height: 376px;
   border: 7px solid #f4deff;
-  border-radius: 10px;
+  border-radius: 24px;
 }
 .aboutus .aboutus__container .aboutus__video-container .aboutus__image iframe {
   position: absolute;
   top: 0;
-  border-radius: 8px;
+  border-radius: 18px;
   left: 0;
   width: 765px;
   /* Full width of the container */
@@ -220,7 +222,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 0 82px;
 }
 .aboutus .aboutus__container .advantages .advantages__item {
@@ -257,7 +259,7 @@ body {
   line-height: 1.333;
 }
 .teachers {
-  background-color: white;
+  background-color: transparent;
 }
 .teachers .teachers__container {
   padding: 100px 10px;
@@ -308,7 +310,7 @@ body {
 }
 .teachers .teachers__container .teachers-all .teacher .teacher__descr .teacher__title {
   font-size: 20px;
-  font-family: "RailwayLight", sans-serif;
+  font-family: "RalewayLight", sans-serif;
   color: #3f3e3e;
   margin-bottom: 9px;
 }
@@ -321,7 +323,7 @@ body {
   font-size: 20px;
 }
 .service {
-  background-color: white;
+  background-color: transparent;
 }
 .service .service__container {
   padding-bottom: 50px;
@@ -350,6 +352,7 @@ body {
   font-family: 'RalewayLight';
   font-size: 25px;
   text-align: center;
+  color: #3f3e3e;
 }
 .service .service__container .service__button-container {
   text-align: center;
@@ -384,7 +387,7 @@ body {
   margin-bottom: 167px;
 }
 .classes .classes__container .class .class__text {
-  max-width: 475px;
+  max-width: 485px;
   text-align: center;
 }
 .classes .classes__container .class .class__text .class__text-title {
@@ -404,7 +407,8 @@ body {
 .classes .classes__container .pluses {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 .classes .classes__container .pluses .plus {
   max-width: 235px;
@@ -457,6 +461,9 @@ body {
   background-color: #f4deff;
   color: #3f3e3e;
   width: 347px;
+}
+.contacts .contacts__container .contacts_details .form-container .form .error-border {
+  border: 1px solid red;
 }
 .contacts .contacts__container .contacts_details .form-container .form input {
   border: 3px solid #f4deff;
@@ -532,7 +539,8 @@ body {
   padding: 0 4px;
 }
 .contacts .contacts__container .contacts_details .map-container .contact-details .icon-detail .detail-icons a:hover img {
-  opacity: 10%;
+  opacity: 70%;
+  transition: opacity 0.3s ease;
 }
 .contacts .contacts__container .contacts_details .map-container .yandex-map {
   width: 100%;
@@ -783,7 +791,7 @@ body {
 }
 @media screen and (max-width: 960px) {
   .main .main__container {
-    padding: 0px 10px 470px 10px;
+    padding: 0px 10px 490px 10px;
     position: relative;
     display: block;
   }
@@ -796,14 +804,19 @@ body {
     text-align: center;
   }
 }
-@media screen and (max-width: 1390px) {
+@media screen and (max-width: 1800px) {
   .main .main__container .main__image {
-    right: 70px;
+    right: 200px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1400px) {
   .main .main__container .main__image {
     right: 10px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .main .main__container .main__image {
+    right: 100px;
     top: 320px;
   }
 }
@@ -866,6 +879,7 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
   }
 }
 @media screen and (max-width: 1200px) {
